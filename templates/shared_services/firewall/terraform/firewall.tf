@@ -3,7 +3,7 @@ resource "azurerm_public_ip" "fwtransit" {
   resource_group_name = local.core_resource_group_name
   location            = data.azurerm_resource_group.rg.location
   allocation_method   = "Static"
-  sku                 = "Standard"
+  sku                 = "Basic"
   tags                = local.tre_shared_service_tags
 
   lifecycle { ignore_changes = [tags, zones] }
